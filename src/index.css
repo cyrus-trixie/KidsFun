@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+ body{
+    font-family: 'Comic Sans MS', cursive, sans-serif; 
+   
+ }
+#title{
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+
+}
+#nav{
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+
+}
+
+#title {
+    animation-name: Anime;            
+    animation-duration: 3s;           /*how long the animation takes */
+    animation-timing-function: ease; 
+    animation-delay: 0.5s;              /* Delay before the animation starts */
+    animation-iteration-count: infinite; /* How many times the animation repeats  */
+    animation-direction: alternate;   /* Direction of animation */
+    animation-fill-mode: forwards;    /* Define how styles are applied after animation ends */
+}
+
+@keyframes Anime {
+    0% {
+        transform:  scale(0.7);  
+    }
+    100% {
+        transform:  scale(1); 
+    }
+}
+
+
