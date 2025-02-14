@@ -1,0 +1,13 @@
+.dish-card {
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    text-align: center;
+}
+
+.dish-card.selected {
+    border-color: #007bff;
+    background-color: #e7f0ff;
+}

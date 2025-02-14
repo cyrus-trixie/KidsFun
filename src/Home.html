@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Your Catering Company</title>
+    <link rel="stylesheet" href="catering.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+<body>
+    <div id="navbar" class="h-screen" >
+<nav class="flex justify-around items-center  p-2 bg-white shadow-lg  fixed w-full"> 
+    <img src="/assets/dish-spoon-knife-icon.png" alt="logo" class="w-10">
+    <ul class="hidden md:flex space-x-8 text-green-800">
+        <a href=""><li>Home</li></a>
+        <a href=""><li>About</li></a>
+        <a href=""><li>Services</li></a>
+        <a href="/components/contactUs.html"><li>Contact us</li></a>
+    </ul>
+    <button class="bg-green-800 text-white p-2 w-28 rounded-lg " onclick="window.open('/components/BookingPage.html')">BOOK NOW</button>
+</nav>
+
+<div id="banner" class=" flex   items-center h-screen p-10 w-full" style="background: url(/assets/banne.avif); background-size: cover; background-repeat: no-repeat; background-position: center;">
+<section class="flex flex-col space-y-4 ">
+    <h1 class="text-5xl md:text-7xl text-green-800">Plan Your Event</h1>
+    <h2 class="text-sm md:text-base text-gray-600">with our all-in-one tool</h2>
+    <h1 class="text-5xl md:text-7xl text-green-800">our platform</h1>
+    <h2 class="text-sm md:text-base text-gray-600">just enter the number of guests and the types of food you plan to serve , <br>and our will do the rest</h2>
+</section>
+</div>
+
+    </div>
+
+    
+    <div id="cards" class="flex justify-center flex-wrap gap-14 h-screen">
+      <section class="flex flex-col items-center space-y-2 border rounded-lg shadow-md md:h-[400px] md:w-[350px] h-[350px] w-[300px]" data-aos="fade-up" data-aos-duration="1000">
+        <img src="/assets/foodiesfeed.com_cheeseburger.jpg" alt="" class="w-full h-[50%] object-cover rounded-t-lg">
+        <h1 class="text-base md:text-xl font-semibold mt-2">Food Planning</h1>
+        <p class="text-sm md:text-base mt-1">Our platform provides a comprehensive tool to help you plan and budget for your event's food needs.</p>
+      </section>
+      <section class="flex flex-col  items-center space-y-2 border rounded-lg shadow-md md:h-[400px] md:w-[350px] h-[350px] w-[300px]" data-aos="fade-up" data-aos-duration="1000">
+        <img src="/assets/foodiesfeed.com_traditional-iranian-saffron-rice-with-raisins.jpg" alt="" class="w-full h-[50%] object-cover rounded-t-lg">
+        <h1 class="text-base md:text-xl font-semibold mt-2">Start Planning</h1>
+        <p class="text-sm md:text-base mt-1">With our intuitive interface, you can input the number of guests, the types of food you want to serve,and our algorithm will provide a detailed budget and suggested menu</p>
+      </section>
+      <section class="flex flex-col items-center space-y-2 border rounded-lg shadow-md md:h-[400px] md:w-[350px] h-[350px] w-[300px]" data-aos="fade-up" data-aos-duration="1000">
+        <img src="/assets/foodiesfeed.com_healthy-food.jpg" alt="" class="w-full h-[50%] object-cover rounded-t-lg">
+        <h1 class="text-base md:text-xl font-semibold mt-2">Event Budgeting</h1>
+        <p class="text-sm md:text-base mt-1">Our tool takes the gueswork out of event planning by providing real-time cost estimates and recommendations to stay within your budget</p>
+      </section>
+    </div>
+
+  <div id="choice" class=" flex justify-around mt-14 items-center">
+    <button id="choice1" class="bg-green-800 border text-white p-2 rounded-lg w-64 hover:bg-white hover:text-green-800">Custom Recipe Budgeting</button>
+    <h1 class="text-gray-600">or</h1>
+    <button id="choice2" class="bg-green-800 border text-white p-2 rounded-lg w-64 hover:bg-white hover:text-green-800">Select from default Dishes</button>
+    </div>
+
+
+    <!--This div will be added to the choices div when the choice2 button is clicked-->
+    <div id="budgetCalc2" class="hidden">
+      <!-- Container -->
+      <div class="container mx-auto p-4 sm:p-2">
+        
+        <!-- Dish Selection Section -->
+        <section>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <!-- Dish Card 1 -->
+            <div class="bg-white rounded-lg shadow-md p-4 sm:p-2 text-center">
+              <img src="/assets/pilau.jpg" alt="Dish 1" class="w-full h-32 sm:h-24 object-cover mb-4 rounded-lg">
+              <h3 class="text-xl sm:text-lg font-semibold text-gray-800">Pilau</h3>
+              <p class="text-gray-600 sm:text-sm">This flavorful and fragrant rice dish is typically made by cooking rice with a variety of spices, meat (usually chicken, beef, or goat).</p>
+              <button id="pilau" class="mt-4 sm:mt-2 bg-green-800 text-white px-4 py-2 sm:px-2 sm:py-1 rounded-lg hover:bg-green-700">Select</button>
+            </div>
+            <!-- Dish Card 2 -->
+            <div class="bg-white rounded-lg shadow-md p-4 sm:p-2 text-center">
+              <img src="/assets/UGALI-1024x768.jpg" alt="Dish 2" class="w-full h-32 sm:h-24 object-cover mb-4 rounded-lg">
+              <h3 class="text-xl sm:text-lg font-semibold text-gray-800">Ugali</h3>
+              <p class="text-gray-600 sm:text-sm">Made from white or yellow cornmeal, salt, and hot water, this starchy, spongy side dish is served with almost every meal.</p>
+              <button id="ugali" class="mt-4 sm:mt-2 bg-green-800 text-white px-4 py-2 sm:px-2 sm:py-1 rounded-lg hover:bg-green-700">Select</button>
+            </div>
+            <!-- Dish Card 3 -->
+            <div class="bg-white rounded-lg shadow-md p-4 sm:p-2 text-center">
+              <img src="/assets/chapati.jpg" alt="Dish 3" class="w-full h-32 sm:h-24 object-cover mb-4 rounded-lg">
+              <h3 class="text-xl sm:text-lg font-semibold text-gray-800">Chapati</h3>
+              <p class="text-gray-600 sm:text-sm">Made with a flour dough that is wound into a coil before being rolled into a flat round circle.</p>
+              <button id="chapati" class="mt-4 sm:mt-2 bg-green-800 text-white px-4 py-2 sm:px-2 sm:py-1 rounded-lg hover:bg-green-700">Select</button>
+            </div>
+          </div>
+        </section>
+    
+        <!-- Guest Input Section -->
+        <section class="mt-8 sm:mt-4">
+          <h2  class="text-2xl sm:text-xl font-semibold text-gray-700 mb-4 sm:mb-2">Enter Number of Guests</h2>
+          <input id="Guests2" type="number" placeholder="Number of Guests" class="w-full md:w-1/2 p-3 sm:p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <button id="GenerateList" class="mt-4 sm:mt-2 bg-green-500 text-white px-4 py-2 sm:px-2 sm:py-1 rounded-lg hover:bg-green-600">Generate List</button>
+        </section>
+    
+        <!-- Output Summary Section -->
+        <section class="mt-8 sm:mt-4">
+          <h2 class="text-2xl sm:text-xl font-semibold text-gray-700 mb-4 sm:mb-2">Ingredients and Cost Summary</h2>
+          <div class="bg-white rounded-lg shadow-md p-4 sm:p-2">
+            <p class="text-gray-800 sm:text-sm">Ingredients Needed:</p>
+            <ul class="list-disc pl-5 text-gray-600 sm:text-sm">
+              <li id="dishList1"></li>
+              <li id="dishList2"></li>
+              <li id="dishList3"></li>
+            </ul>
+            <p id="costDishes" class="mt-4 sm:mt-2 text-gray-800 font-semibold sm:text-sm">Total Cost: </p>
+            <div class="mt-4 sm:mt-2">
+              <button class="bg-yellow-500 text-white px-4 py-2 sm:px-2 sm:py-1 rounded-lg hover:bg-yellow-600">Save</button>
+              <button class="bg-gray-500 text-white px-4 py-2 sm:px-2 sm:py-1 rounded-lg hover:bg-gray-600">Print</button>
+              <button class="bg-red-500 text-white px-4 py-2 sm:px-2 sm:py-1 rounded-lg hover:bg-red-600">Back</button>
+            </div>
+          </div>
+        </section>
+    
+      </div>
+      <!-- End Container -->
+    </div>
+    
+    <div class="flex justify-center items-center fixed right-0 top-1/2 transform -translate-y-1/2 p-2 shadow-lg rounded-full h-24 w-24 bg-green-800" >
+      <p class="text-white">ksh.<span id="budgetCalc1Output" >0</span></p>
+    </div>
+    
+    
+
+ <!--create custom dishes-->
+  <div class=" h-screen p-10 ">
+ <div class="mt-10 flex justify-center items-center">
+  <section class="flex flex-col space-y-2  ">
+    <label class="font-2xl font-semibold">*NUMBER OF PEOPLE TO BE CATERED</label>
+    <input type="number" name="" id="numberOfPeople" placeholder="Enter Number of guests" class="p-2 border rounded-md">  
+  </section>
+ </div>
+ 
+
+
+ <div class="mt-10 flex flex-col space-y-4">
+  <h1 class="text-3xl font-semibold">Main Dishes</h1>
+  <hr>
+  <section class="ml-20 flex flex-col space-y-2">
+    <section class="flex space-x-4 items-center">
+      <input type="checkbox" id="pilauDish" value="200">
+      <p>Pilau – Spiced rice cooked with meat (beef, chicken, or goat). <span class="text-gray-500">(Approx. 200 Ksh per person)</span></p>
+    </section>
+    <section class="flex space-x-4 items-center">
+      <input type="checkbox" id="nyamaChoma" value="300">
+      <p>Nyama Choma – Grilled meat, usually beef or goat. <span class="text-gray-500">(Approx. 300 Ksh per person)</span></p>
+    </section>
+    <section class="flex space-x-4 items-center">
+      <input type="checkbox" id="chapati" value="20">
+      <p>Chapati – Soft, layered flatbread. <span class="text-gray-500">(Approx. 20 Ksh per piece)</span></p>
+    </section>
+    <section class="flex space-x-4 items-center">
+      <input type="checkbox" id="ugali" value="30">
+      <p>Ugali – Maize flour staple, best paired with stews or vegetables. <span class="text-gray-500">(Approx. 30 Ksh per person)</span></p>
+    </section>
+    <section class="flex space-x-4 items-center">
+      <input type="checkbox" id="mukimo" value="150">
+      <p>Mukimo – Mashed potatoes with greens, maize, and beans. <span class="text-gray-500">(Approx. 150 Ksh per person)</span></p>
+    </section>
+    <section class="flex space-x-4 items-center">
+      <input type="checkbox" id="samaki" value="250">
+      <p>Samaki – Fried or stewed fish, especially tilapia. <span class="text-gray-500">(Approx. 250 Ksh per person)</span></p>
+    </section>
+  </section>
+</div>
+
+<div class="mt-10 flex flex-col space-y-4">
+  <h1 class="text-3xl font-semibold">Stews and Sauces</h1>
+  <hr>
+  <section class="ml-20 flex flex-col space-y-2">
+    <section class="flex space-x-4 items-center">
+      <input type="checkbox" id="beefStew" value="250">
+      <p>Beef/Goat Stew – Slow-cooked meat in a flavorful tomato-based sauce. <span class="text-gray-500">(Approx. 250 Ksh per person)</span></p>
+    </section>
+    <section class="flex space-x-4 items-center">
+      <input type="checkbox" id="chickenCurry" value="300">
+      <p>Chicken Curry – Spiced chicken in a creamy sauce. <span class="text-gray-500">(Approx. 300 Ksh per person)</span></p>
+    </section>
+    <section class="flex space-x-4 items-center">
+      <input type="checkbox" id="sukumaWiki" value="50">
+      <p>Sukuma Wiki – Sautéed collard greens, often served as a side dish. <span class="text-gray-500">(Approx. 50 Ksh per person)</span></p>
+    </section>
+    <section class="flex space-x-4 items-center">
+      <input type="checkbox" id="beansStew" value="80">
+      <p>Beans or Ndengu Stew – A vegetarian-friendly lentil or green gram option. <span class="text-gray-500">(Approx. 80 Ksh per person)</span></p>
+    </section>
+  </section>
+</div>
+
+<div class="mt-10 flex flex-col space-y-4">
+  <h1 class="text-3xl font-semibold">Side Dishes</h1>
+  <hr>
+  <section class="ml-20 flex flex-col space-y-2">
+    <section class="flex space-x-4 items-center">
+      <input type="checkbox" id="rice" value="100">
+      <p>Rice – Plain, coconut, or vegetable fried rice. <span class="text-gray-500">(Approx. 100 Ksh per person)</span></p>
+    </section>
+    <section class="flex space-x-4 items-center">
+      <input type="checkbox" id="kachumbari" value="50">
+      <p>Kachumbari – Fresh tomato and onion salad, with a splash of lemon. <span class="text-gray-500">(Approx. 50 Ksh per person)</span></p>
+    </section>
+    <section class="flex space-x-4 items-center">
+      <input type="checkbox" id="potatoChips" value="150">
+      <p>Potato Wedges or Chips – A favorite for kids and modern palates. <span class="text-gray-500">(Approx. 150 Ksh per person)</span></p>
+    </section>
+  </section>
+</div>
+
+<div class="mt-10 flex flex-col space-y-4">
+  <h1 class="text-3xl font-semibold">Snacks and Starters</h1>
+  <hr>
+  <section class="ml-20 flex flex-col space-y-2">
+    <section class="flex space-x-4 items-center">
+      <input type="checkbox" id="samosas" value="50">
+      <p>Samosas – Fried pastry filled with minced meat or vegetables. <span class="text-gray-500">(Approx. 50 Ksh per piece)</span></p>
+    </section>
+    <section class="flex space-x-4 items-center">
+      <input type="checkbox" id="bhajias" value="80">
+      <p>Bhajias – Deep-fried potato slices coated in seasoned chickpea flour batter. <span class="text-gray-500">(Approx. 80 Ksh per person)</span></p>
+    </section>
+    <section class="flex space-x-4 items-center">
+      <input type="checkbox" id="mandazi" value="30">
+      <p>Mandazi – Sweet fried dough, similar to donuts. <span class="text-gray-500">(Approx. 30 Ksh per piece)</span></p>
+    </section>
+    <section class="flex space-x-4 items-center">
+      <input type="checkbox" id="corn" value="40">
+      <p>Corn on the Cob – Grilled or boiled maize. <span class="text-gray-500">(Approx. 40 Ksh per cob)</span></p>
+    </section>
+  </section>
+</div>
+
+<div class="mt-10 flex flex-col space-y-4">
+  <h1 class="text-3xl font-semibold">Desserts</h1>
+  <hr>
+  <section class="ml-20 flex flex-col space-y-2">
+    <section class="flex space-x-4 items-center">
+      <input type="checkbox" id="fruitSlice" value="50">
+      <p>Mango or Pineapple Slices – Fresh tropical fruits. <span class="text-gray-500">(Approx. 50 Ksh per serving)</span></p>
+    </section>
+    <section class="flex space-x-4 items-center">
+      <input type="checkbox" id="coconutRice" value="150">
+      <p>Sweetened Coconut Rice – A dessert version of pilau. <span class="text-gray-500">(Approx. 150 Ksh per person)</span></p>
+    </section>
+    <section class="flex space-x-4 items-center">
+      <input type="checkbox" id="madafu"  value="70">
+      <p>Madafu – Fresh coconut water served in the shell. <span class="text-gray-500">(Approx. 70 Ksh per shell)</span></p>
+    </section>
+  </section>
+</div>
+
+<div class="mt-10 flex flex-col space-y-4">
+  <h1 class="text-3xl font-semibold">Drinks</h1>
+  <hr>
+  <section class="ml-20 flex flex-col space-y-2">
+    <section class="flex space-x-4 items-center">
+      <input type="checkbox" id="chai" value="30">
+      <p>Chai – Kenyan tea made with milk, sugar, and spices. <span class="text-gray-500">(Approx. 30 Ksh per cup)</span></p>
+    </section>
+    <section class="flex space-x-4 items-center">
+      <input type="checkbox" id="mursik" value="50">
+      <p>Mursik – Traditional fermented milk (popular in Rift Valley regions). <span class="text-gray-500">(Approx. 50 Ksh per serving)</span></p>
+    </section>
+    <section class="flex space-x-4 items-center">
+      <input type="checkbox" id="juice" value="100">
+      <p>Fresh Juices – Mango, passion fruit, or hibiscus (known as "sobo"). <span class="text-gray-500">(Approx. 100 Ksh per serving)</span></p>
+    </section>
+    <section class="flex space-x-4 items-center">
+      <input type="checkbox" id="soda" value="40">
+      <p>Soda – Soft drinks like Coca-Cola, Fanta, and Sprite are common. <span class="text-gray-500">(Approx. 40 Ksh per bottle)</span></p>
+    </section>
+  </section>
+</div>
+
+
+
+     
+
+  </div>
+
+
+
+
+
+
+
+    <script src="/budgetCalc1.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+    once: false // This makes sure animations happen every time you scroll back up
+  });
+  
+    </script>
+    <script>
+      window.embeddedChatbotConfig = {
+      chatbotId: "e4y7aNUFUIvIQWREyg63s",
+      domain: "www.chatbase.co"
+      }
+      </script>
+      <script
+      src="https://www.chatbase.co/embed.min.js"
+      chatbotId="e4y7aNUFUIvIQWREyg63s"
+      domain="www.chatbase.co"
+      defer>
+      </script>
+    
+</body>
+</html>
